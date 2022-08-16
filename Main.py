@@ -10,7 +10,7 @@ class Solution:
       """
 
     # Write your code here
-    def _init_(self, size):
+    def __init__(self, size):
         """Inits Solution with stack, queue, size, top, front and rear.
         Arguments:
           size: An integer to set the size of stack and queue.
@@ -30,7 +30,7 @@ class Solution:
         """
         return self.top == -1
 
-    def is_queue_empty(self):
+    def is__queue__empty(self):
         """
         Check whether the queue is empty.
         Returns:
@@ -38,7 +38,7 @@ class Solution:
         """
         return self.front == -1 or self.front > self.rear
 
-    def is_stack_full(self):
+    def is__stack__full(self):
         """
         Check whether the stack is full.
         Returns:
@@ -46,7 +46,7 @@ class Solution:
         """
         return self.top == self.size - 1
 
-    def is_queue_full(self):
+    def is__queue__full(self):
         """
         Check whether the queue is full.
         Returns:
@@ -54,29 +54,29 @@ class Solution:
         """
         return self.rear == self.size - 1
 
-    def push_character(self, character):
+    def push__character(self, character):
         """
         Push the character to stack, if stack is not full.
         Arguments:
             character: A character that will be pushed to the stack.
         """
-        if not self.is_stack_full():
+        if not self.is__stack__full():
             self.stack.append(character)
             self.top += 1
 
-    def enqueue_character(self, character):
+    def enqueue__character(self, character):
         """
         Enqueue the character to queue, if queue is not full.
         Arguments:
             character: A character that will be enqueued to queue.
         """
-        if not self.is_queue_full():
+        if not self.is__queue__full():
             if  self.front == -1:
                 self.front = 0
             self.rear += 1
             self.queue.append(character)
 
-    def pop_character(self):
+    def pop__character(self):
         """
         Do pop operation if the stack is not empty.
         Returns:
@@ -86,13 +86,13 @@ class Solution:
             self.top -= 1
             return self.stack.pop(self.top + 1)
 
-    def dequeue_character(self):
+    def dequeue__character(self):
         """
         Do dequeue operation if the queue is not empty.
         Returns:
           The data that is dequeued if the queue is not empty.
         """
-        if not self.is_queue_empty():
+        if not self.is__queue__empty():
             self.front += 1
             return self.queue[self.front - 1] 
                 
