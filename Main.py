@@ -22,7 +22,7 @@ class Solution:
         self.rear = -1
         self.front = -1
 
-    def is_stack_empty(self):
+    def is__stack__empty(self):
         """
         Check whether the stack is empty.
         Returns:
@@ -108,24 +108,24 @@ length_of_text = len(text)
 solution = Solution(length_of_text)
 
 # push/enqueue all the characters of string text to stack
-for index in range(length_of_text):
+for index in range(length__of__text):
     solution.push_character(text[index])
     solution.enqueue_character(text[index])
 
-is_palindrome = True
+is__palindrome = True
 '''
 pop the top character from stack
 dequeue the first character from queue
 compare both characters
 If the comparison fails, set is_palindrome as False.
 '''
-for index in range(length_of_text):
+for index in range(length__of__text):
     if solution.pop_character() != solution.dequeue_character():
         is_palindrome = False
 
 
 # finally print whether string text is palindrome or not.
-if is_palindrome:
+if is__palindrome:
     print("The word, " + text + ", is a palindrome.")
 else:
     print("The word, " + text + ", is not a palindrome.")
