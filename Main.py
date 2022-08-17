@@ -30,7 +30,7 @@ class Solution:
         """
         return self.top == -1
 
-    def is__queue__empty(self):
+    def is_queue_empty(self):
         """
         Check whether the queue is empty.
         Returns:
@@ -92,7 +92,7 @@ class Solution:
         Returns:
           The data that is dequeued if the queue is not empty.
         """
-        if not self.is__queue__empty():
+        if not self.is_queue_empty():
             self.front += 1
             return self.queue[self.front - 1] 
                 
@@ -119,7 +119,7 @@ dequeue the first character from queue
 compare both characters
 If the comparison fails, set is_palindrome as False.
 '''
-for index in range(length__of__text):
+for index in range(length_of_text):
     if solution.pop_character() != solution.dequeue_character():
         is_palindrome = False
 
